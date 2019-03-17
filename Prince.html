@@ -7,8 +7,6 @@
 
 <body>
 
-<!-- https://fonts.google.com/specimen/Oranienbaum  for font-->
-
 <header>
 	<nav>
 			<a href="" class="nav-logo">
@@ -24,18 +22,9 @@
 </header>
 
 <main>
-	<!-- <div class="first grid-container">
-			<div class="row"> -->
 		<div class="first row">
 		 	<div class="grid-container">
 				<article class="col-4">
-					<!-- <div class="dots">
-						  <span class="dot" onclick="currentSlide(1)"></span>
-						  <span class="dot" onclick="currentSlide(2)"></span>
-						  <span class="dot" onclick="currentSlide(3)"></span>
-						  <span class="dot" onclick="currentSlide(4)"></span>
-						  <span class="dot" onclick="currentSlide(5)"></span>
-					</div> -->
 					  <div class="motor_cycle_slide fade">
 						    <img src="suzuki-650.jpg">
 						    <div class="text"> Suzuki SV650X</div>
@@ -288,18 +277,6 @@
 		float: left;
 		display: block;
 	}
-	
-
-	/*main .first
-	{
-		position: relative;
-		margin: 50px auto;
-	}
-	main .first .row{
-		height: 450px;
-		background-color: white;
-		box-shadow:0 0px 6px 0 rgba(32,33,36,0.28);
-	}*/
 
 	main .first{
 		position: relative;
@@ -390,39 +367,16 @@
 	.text {
 		display: none;
 	  color: #f2f2f2;
-	  /*background-color: rgba(0,0,0,0.67);*/
 	  font-size: 20px;
-	  /*padding: 10px 0;*/
 	  position: absolute;
-	  /*bottom: 0px;*/
-	  /*width: 100%;*/
 	  top: 50%;
 	  left: 50%;
 	  transform: translate(-50%, -50%);
-	  /*text-align: center;*/
 	}
 
 	.active{
 	  background-color: #717171;
 	}
-
-	/* Fading animation */
-	/*.fade {
-	  -webkit-animation-name: fade;
-	  -webkit-animation-duration: 1.5s;
-	  animation-name: fade;
-	  animation-duration: 1.5s;
-	}
-
-	@-webkit-keyframes fade {
-	  from {opacity: .4}
-	  to {opacity: 1}
-	}
-
-	@keyframes fade {
-	  from {opacity: .4}
-	  to {opacity: 1}
-	}*/
 	main .first .col-2{
 	 	float: left;
 	 	height: inherit;
@@ -557,14 +511,10 @@
 	function autoSlide() {
 	  var i;
 	  var autoSlides = document.getElementsByClassName("motor_cycle_slide");
-	  // var dots = document.getElementsByClassName("dot");
 	  var details = document.getElementsByClassName("motorcycle-info");
 	  for (i = 0; i < autoSlides.length; i++) {
 	    autoSlides[i].style.display = "none";
 	  }
-	  // for (i = 0; i < dots.length; i++) {
-	  //     dots[i].className = dots[i].className.replace(" active", "");
-	  // }
 	  for (i = 0; i < details.length; i++) {
 	  	  details[i].style.display = "none";
 	      details[i].className = details[i].className.replace(" fade-in-bottom", "");
@@ -574,8 +524,7 @@
 	  autoSlides[slideIndex-1].style.display = "block";
 	 details[slideIndex-1].className += " fade-in-bottom";
 	  details[slideIndex-1].style.display = "block";
-		// dots[slideIndex-1].className += " active";
-	  setTimeout(autoSlide, 6000); // Change image every 2 seconds
+	  setTimeout(autoSlide, 6000); 
 	} 
 
 </script>
